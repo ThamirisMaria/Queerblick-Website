@@ -1,1 +1,1 @@
-Queer Blick Website
+Queerblick Website
