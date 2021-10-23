@@ -163,10 +163,27 @@
 / HOME SECTION
 ****/
 .home{
+    position: relative;
     background: #11998e; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #11998e, #38ef7d); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #11998e, #38ef7d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+}
+
+.home::before{
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: url("images/home.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 200px 0;
+    opacity: 0.50;
+    filter: blur(2px);
 }
 
 .home_container{
@@ -182,12 +199,14 @@
 }
 
 .home_heading{
+    position: relative;
     font-size: 80px;
     margin-bottom: 24px;
     color: whitesmoke;
 }
 
 .home_heading span{
+    position: relative;
     background: #C22EDC; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FE0000, #FD8C00, #FFE500, #119F0B, #0644B3, #C22EDC); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FE0000, #FD8C00,#FFE500, #119F0B, #193e7e, #C22EDC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -196,8 +215,18 @@
 }
 
 .home_subheading{
-    color:whitesmoke;
+    position: relative;
     font-size: 30px;
+    background: whitesmoke; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FE0000, #FD8C00, #FFE500, #119F0B, #0644B3, #C22EDC); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FE0000, #FD8C00,#FFE500, #119F0B, #193e7e, #C22EDC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100%;
+    background-blend-mode:color-burn;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
 }
 
 .highlight{
@@ -210,7 +239,7 @@
     }
 
     .home_subheading{
-        font-size: 30px;
+        font-size: 25px;
     }
 }
 
